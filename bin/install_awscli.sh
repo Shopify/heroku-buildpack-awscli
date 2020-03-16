@@ -1,9 +1,4 @@
 #!/bin/bash
-INSTALL_DIR="/app/vendor/awscli"
-chmod +x /app/vendor/awscli-bundle/install
-/app/vendor/awscli-bundle/install -i $INSTALL_DIR
-chmod u+x $INSTALL_DIR/bin/aws
-
 export PATH=~/vendor/awscli/bin:$PATH
 
 mkdir -p ~/.aws

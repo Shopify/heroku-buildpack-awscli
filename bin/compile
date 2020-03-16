@@ -29,6 +29,11 @@ mkdir -p $BUILD_DIR/.profile.d
 cp "$BUILDPACK_DIR/bin/install_awscli.sh" $BUILD_DIR/.profile.d/
 chmod +x $BUILD_DIR/.profile.d/install_awscli.sh
 
+INSTALL_DIR="/app/vendor/awscli"
+chmod +x /app/vendor/awscli-bundle/install
+/app/vendor/awscli-bundle/install -i $INSTALL_DIR
+chmod u+x $INSTALL_DIR/bin/aws
+
 #cleaning up...
 rm -rf /tmp/awscli*
 
